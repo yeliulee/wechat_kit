@@ -9,7 +9,7 @@ void main() {
   const MethodChannel channel = MethodChannel('v7lin.github.io/wechat_kit');
 
   setUp(() {
-    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+    TestDefaultBinaryMessengerBinding.instance?.defaultBinaryMessenger
         .setMockMethodCallHandler(
       channel,
       (MethodCall methodCall) async {
@@ -23,7 +23,7 @@ void main() {
   });
 
   tearDown(() {
-    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+    TestDefaultBinaryMessengerBinding.instance?.defaultBinaryMessenger
         .setMockMethodCallHandler(channel, null);
   });
 
